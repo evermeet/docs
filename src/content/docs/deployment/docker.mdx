@@ -1,0 +1,107 @@
+---
+title: Docker Deployment
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+Using [Docker](https://www.docker.com/) and containerization is an easy and recommended way to run evermeet instance.
+
+## Requirements
+
+* domain or subdomain (e.g. `my-evermeet-instance.com` etc.)
+* machine with Docker installed (own HW or cloud)
+* webserver or reverse proxy that provides HTTPS (e.g. Nginx, Caddy etc.)
+
+## Quickstart
+
+Here's a guide on how to get started leveraging [Docker Compose](https://docs.docker.com/compose/) (V2) functionality.
+
+import { Steps } from '@astrojs/starlight/components';
+
+<Steps>
+
+1. Clone [`@evermeet/evermeet-docker`](https://github.com/evermeet/evermeet-docker) repository:
+
+   ```bash
+   git clone git@github.com:evermeet/evermeet-docker.git
+   cd evermeet-docker
+   ```
+
+2. Create configuration file `config.yaml`:
+
+   ```bash
+   cp config.example.yaml config.yaml
+   ```
+
+
+3. Update [Configuration file](/operation/configuration) `config.yaml` regarding to your setup:
+
+   ```yaml ins={3-6}
+   // config.yaml
+
+   domain: my-evermeet-instance.com
+   ```
+
+4. Run your instance:
+
+   ```bash
+   docker compose up -d
+   ```
+
+</Steps>
+
+Done! Now your evermeet instance is running on port `3005` on target machine. On a local machine, you can test the functionality by visiting http://localhost:3005.
+
+You can now proceed by [setting up a reverse proxy](#setting-up-a-reverse-proxy) on your webserver.
+
+## Setting up a reverse proxy
+
+Here are the minimal settings for the most common webservers or proxies:
+
+<Tabs>
+  <TabItem label="Caddy">
+    Using [Caddy](https://caddyserver.com/) is the easiest and recommended option if you don't have a webserver yet, as it automatically obtains and renews TLS certificates for HTTPS.
+
+    Configuration example:
+    ```caddy
+    my-evermeet-instance.com {
+      reverse_proxy localhost:3005
+    }
+    ```
+  </TabItem>
+
+  <TabItem label="nginx">
+
+    Configuration example for [nginx](https://nginx.com/) webserver:
+
+    ```nginx
+    server {
+        listen 80;
+        server_name my-evermeet-instance.com;
+        # Redirect HTTP to HTTPS
+        return 301 https://$server_name$request_uri;
+    }
+
+    server {
+        listen 443 ssl;
+        server_name my-evermeet-instance.com;
+
+        ssl_certificate /etc/nginx/ssl/my-evermeet-instance.com.crt;
+        ssl_certificate_key /etc/nginx/ssl/my-evermeet-instance.com.key;
+
+        ssl_protocols TLSv1.2 TLSv1.3; # Recommended protocols
+        ssl_ciphers 'ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384';
+        ssl_prefer_server_ciphers on;
+
+        location / {
+            proxy_pass http://localhost:3005;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+        }
+    }
+    ```
+  </TabItem>
+</Tabs>

@@ -1,0 +1,46 @@
+---
+title: Local Development Setup
+---
+
+## Requirements
+
+* [Node.js](https://nodejs.org/en) v20.12.2+ (LTS) 
+* [pnpm](https://pnpm.io/) package manager ([How to install](https://pnpm.io/installation))
+* Local development [MongoDB](https://www.mongodb.com/) instance
+
+## Quickstart
+
+import { Steps } from '@astrojs/starlight/components';
+
+<Steps>
+
+1. Clone [`@evermeet/evermeet`](https://github.com/evermeet/evermeet) repository:
+
+   ```bash
+   git clone git@github.com:evermeet/evermeet.git
+   cd evermeet
+   ```
+
+2. Install depedencies:
+
+   ```bash
+   pnpm i
+   ```
+
+3. Run your development instance:
+
+   ```bash
+   pnpm start
+   ```
+
+</Steps>
+
+Done, your development instance is up and running and available at the following addresses:
+
+* Frontend (web): http://localhost:3001
+* Backend (api): http://localhost:3000/api
+
+
+## Database
+
+TODO
