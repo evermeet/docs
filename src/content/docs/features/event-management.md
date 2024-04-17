@@ -1,5 +1,0 @@
----
-title: Event Management
----
-
-TODO

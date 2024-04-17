@@ -18,20 +18,21 @@ export default defineConfig({
 						{ label: 'Why evermeet?', link: '/why-evermeet' },
 					],
 				},
-				/*{
+				{
 					label: 'Features',
 					items: [
-						{ label: 'Event Management', link: '/features/event-management' },
-						{ label: 'Ticket Sales and Registration', link: '/features/ticket-sales' },
-						{ label: 'Speaker and Program Management', link: '/features/speaker-management' },
-						{ label: 'Payment Processing', link: '/features/payment-processing' }
+						{ label: 'Events & Calendars', link: '/features/events-calendars' },
+						{ label: 'Ticket Sales and Registration', link: '/features/tickets-registration' },
+						{ label: 'Speakers and Program', link: '/features/speaker-management' },
+						{ label: 'Hackathon Features', link: '/features/hackathon' },
+						{ label: 'For Attendees', link: '/features/for-attendees' },
 					]
-				},*/
+				},
 				{
 					label: 'Deployment',
 					items: [
 						{ label: 'Deployment Methods', link: '/deployment/methods' },
-						{ label: 'Third-party Hosting', link: '/deployment/third-parties' },
+						/*{ label: 'Third-party Hosting', link: '/deployment/third-parties' },*/
 						{ label: 'Docker (recommended)', link: '/deployment/docker' },
 						{ label: 'Manual Deployment', link: '/deployment/manual' },
 
@@ -41,20 +42,10 @@ export default defineConfig({
 					label: 'Operation Manual',
 					items: [
 						{ label: 'Instance Configuration', link: '/operation/configuration' },
-						{ label: 'Backup & Restore', link: '/operation/backup' },
-						{ label: 'Command-line Tool (cli)', link: '/operation/cli' },
+						/*{ label: 'Backup & Restore', link: '/operation/backup' },*/
+						/*{ label: 'Command-line Tool (cli)', link: '/operation/cli' },*/
 						/*{ label: 'Performance Optimization', link: '/operation/performance' },*/
-						{ label: 'Common Issues and Solutions', link: '/operation/common-issues' },
-					]
-				},
-				{
-					label: 'Developers',
-					items: [
-						{ label: 'System Architecture', link: '/developers/system-architecture' },
-						/*{ label: 'Contributing Guidelines', link: '/developers/contributing' },*/
-						{ label: 'Local Development Setup', link: '/developers/local-setup' },
-						{ label: 'Client Libraries', link: '/developers/libraries' },
-						{ label: 'API Reference', link: '/developers/api-endpoints' },
+						/*{ label: 'Common Issues and Solutions', link: '/operation/common-issues' },*/
 					]
 				},
 				{
@@ -62,14 +53,24 @@ export default defineConfig({
 					items: [
 						{ label: 'Federation Overview', link: '/federation/overview' },
 						{ label: 'Portable Identifiers (DID)', link: '/federation/did' },
-						{ label: 'Communication Protocol', link: '/federation/protocol' },
+						/*{ label: 'Communication Protocol', link: '/federation/protocol' },*/
 					]
 				},
-				{
+				/*{
 					label: 'Release Notes',
 					items: [
 						{ label: 'Version History', link: '/release-notes/version-history' },
 						{ label: 'Future Plans', link: '/release-notes/future-plans' }
+					]
+				},*/
+				{
+					label: 'Developers',
+					items: [
+						{ label: 'System Architecture', link: '/developers/system-architecture' },
+						/*{ label: 'Contributing Guidelines', link: '/developers/contributing' },*/
+						{ label: 'Local Development Setup', link: '/developers/local-setup' },
+						/*{ label: 'Client Libraries', link: '/developers/libraries' },*/
+						/*{ label: 'API Reference', link: '/developers/api-endpoints' },*/
 					]
 				},
 			],

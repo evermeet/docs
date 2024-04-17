@@ -1,0 +1,41 @@
+---
+title: Getting Started
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+[Evermeet](https://github.com/evermeet/evermeet) is a next-generation open-source platform for hosting and publishing events like meetups, conferences or hackathons.
+
+## About evermeet
+
+<LinkCard title="Why evermeet?" href="/why-evermeet" description="Find out whats special about evermeet" />
+
+## Deployment
+
+<LinkCard
+    title="Deploy with Docker (recommended)"
+    href="/deployment/docker"
+    description="Deploy your own evermeet instance in few minutes!"
+/>
+<CardGrid>
+    <LinkCard title="Deployment Methods" href="/deployment/methods" />
+    <LinkCard title="Manual Deployment" href="/deployment/manual" />
+</CardGrid>
+
+## Operation Manual
+<CardGrid>
+    <LinkCard title="Instance Configuration" href="/operation/configuration" />
+    {/*<LinkCard title="Backup & Restore" href="/operation/backup" /-->*/}
+</CardGrid>
+
+## Developers
+
+<CardGrid>
+    <LinkCard title="System Architecture" href="/developers/system-architecture" />
+    <LinkCard title="Local Development Setup" href="/developers/local-setup" />
+</CardGrid>
+
+## 🤝 Join our community!
+
+* GitHub: [@evermeet/evermeet](https://github.com/evermeet/evermeet)
+* Matrix channel: [#evermeet:matrix.org](https://matrix.to/#/%23evermeet:matrix.org)
