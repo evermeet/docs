@@ -69,6 +69,7 @@ export default defineConfig({
 						{ label: 'System Architecture', link: '/developers/system-architecture' },
 						/*{ label: 'Contributing Guidelines', link: '/developers/contributing' },*/
 						{ label: 'Local Development Setup', link: '/developers/local-setup' },
+						{ label: 'HTTP API (XRPC)', link: '/developers/xrpc' },
 						/*{ label: 'Client Libraries', link: '/developers/libraries' },*/
 						/*{ label: 'API Reference', link: '/developers/api-endpoints' },*/
 					]
