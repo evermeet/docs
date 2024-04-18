@@ -2,4 +2,32 @@
 title: System Architecture
 ---
 
-![](../../../assets/architecture-diagram.png)
+We are currently developing a reference implementation [`@evermeet/evermeet`](https://github.com/evermeet/evermeet). This implementation is written in JavaScript, and executed using [Node.js](https://nodejs.org), [Deno](https://deno.com/) or [Bun](https://bun.sh/) runtime environment.
+
+Future plan is to create implementations in other languages such as Rust or Go.
+
+## Evermeet Instance
+
+Evermeet Instance is the term for an application that contains both a [Backend](#backend-api) as an API and a [Frontend](#frontend-web) for clients.
+
+![Evermeet Instance diagram](../../../assets/architecture-diagram.png)
+
+## Backend (api)
+
+The backend is the central part of an evermeet instance:
+
+* handles most of the workflows
+* connected to the [Database](#database) where the data is stored
+* communicate with the [Frontend](#frontend-web) and clients
+* communicate with other instances within the [Federation](/specs/federation)
+
+Backend communicate with Frontend, clients and external instances through HTTP & WebSocket API ([XRPC](/specs/xrpc)) endpoints defined by [Lexicons](/specs/lexicon).
+
+### Database
+
+As a database, we currently use the storage-agnostic solution [RxDB](https://rxdb.info/), which allows the use of various storage solutions under the hood.
+
+
+## Frontend (web)
+
+The frontend is the web user interface through which users interact with the evermeet instance.

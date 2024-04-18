@@ -1,0 +1,22 @@
+---
+title: Lexicon
+---
+
+Lexicon is a schema definition language used to describe evermeet records, HTTP endpoints ([XRPC](/specs/xrpc)), and event stream messages.
+
+We are currently using the [Lexicon definition language version 1](https://atproto.com/specs/lexicon) specification as defined by the AT Protocol.
+
+The schema language is similar to JSON Schema and OpenAPI.
+
+## Namespaced Identifiers (NSIDs)
+
+Namespaced Identifiers (NSIDs) are used to reference Lexicon schemas for records, XRPC endpoints, and more.
+
+The basic structure and semantics of an NSID are a fully-qualified hostname in Reverse Domain-Name Order, followed by a simple name. The hostname part is the domain authority, and the final segment is the name.
+
+For example: 
+* `app.evermeet.object.getProfile`
+* `app.evermeet.auth.createSession`
+* `app.evermeet.server.describeServer`
+
+→ [Full NSID Syntax specification](https://atproto.com/specs/nsid)

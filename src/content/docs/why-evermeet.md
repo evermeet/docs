@@ -2,31 +2,38 @@
 title: Why evermeet?
 ---
 
-## All-in-one solution
+## Self-Hosted, Decentralized Platform
 
-Solution that includes most of tools hosts needs:
+Gain full control with Evermeet's self-hosted, decentralized solution that secures your data and operational autonomy away from third-party dependencies.
 
-- 🎟️ [Event Management](/features/event-management)
-- 🎫 [Ticket Sales and Registration](/features/ticket-sales)
-- 🗣️ [Speaker and Program Management](/features/speaker-management)
-- 💳 [Payment Processing](/features/payment-processing)
+## All-in-One Event Management
 
-## Modern and fast
+Evermeet integrates all necessary tools for comprehensive event management into one platform, suitable for any event size or type:
 
-We use current or future technologies and constantly strive to innovate.
+- 📅 [Events & Calendars](/features/events-calendars)
+- 🎫 [Ticket Sales and Registration](/features/tickets-registration)
+- 🗣️ [Speakers and Program](/features/speaker-management)
+- 👨‍💻 [Hackathon Features](/features/hackathon)
+- 🧑‍🤝‍🧑 [For Attendees](/features/for-attendees)
 
-## Interconnected
+## Cutting-Edge and Secure
 
-Each evermeet instance is automatically connected to a decentralized P2P network ([Federation](/federation/overview)) within which you can use a single identity and share information about events and calendars.
+Using the latest in technology, Evermeet provides a fast, responsive experience backed by robust security features, protecting user and event data.
 
-## Privacy-preserving
+## Enhanced Interconnectivity with DIDs
 
-We value privacy, which is why evermeet is designed with privacy in mind. It is thus also suitable for organizers who value the privacy of their visitors.
+Evermeet employs [Decentralized Identifiers](/specs/did) (DIDs) not only for secure user identity management across events but also for each event and calendar entry. This enhances privacy, facilitates seamless integration across platforms, and promotes a unified approach to event data verification.
 
-## Community-based
+## Committed to Privacy
 
-Community is the foundation of our project. Without your feedback and interaction it would never work. Evermeet is made by the community for the community.
+Evermeet prioritizes privacy at every level of its platform. Our decentralized, self-hosted model ensures that your data is kept private and under your control, supporting a secure environment for all participants.
 
-## Open-source
+## Community-Driven and Open-Source
 
-Evermeet is completely open-source under the benevolent MIT license.
+Fostered by community insights and contributions, Evermeet is an open-source project under the MIT license, promoting a transparent and collaborative development environment.
+
+## Environmentally Conscious and Accessible
+
+Designed to be inclusive and sustainable, Evermeet ensures that all users have equal access while encouraging practices that reduce the environmental footprint of events.
+
+By choosing Evermeet, you're opting for a platform that not only manages events efficiently but also advances the use of decentralized technology to ensure security, privacy, and interconnectivity.

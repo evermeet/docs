@@ -49,10 +49,12 @@ export default defineConfig({
 					]
 				},
 				{
-					label: 'Federation',
+					label: 'Specs',
 					items: [
-						{ label: 'Federation Overview', link: '/federation/overview' },
-						{ label: 'Portable Identifiers (DID)', link: '/federation/did' },
+						{ label: 'Federation', link: '/specs/federation' },
+						{ label: 'Lexicon', link: '/specs/lexicon' },
+						{ label: 'Identifier (DID)', link: '/specs/did' },
+						{ label: 'HTTP API (XRPC)', link: '/specs/xrpc' },
 						/*{ label: 'Communication Protocol', link: '/federation/protocol' },*/
 					]
 				},
@@ -69,7 +71,6 @@ export default defineConfig({
 						{ label: 'System Architecture', link: '/developers/system-architecture' },
 						/*{ label: 'Contributing Guidelines', link: '/developers/contributing' },*/
 						{ label: 'Local Development Setup', link: '/developers/local-setup' },
-						{ label: 'HTTP API (XRPC)', link: '/developers/xrpc' },
 						/*{ label: 'Client Libraries', link: '/developers/libraries' },*/
 						/*{ label: 'API Reference', link: '/developers/api-endpoints' },*/
 					]
