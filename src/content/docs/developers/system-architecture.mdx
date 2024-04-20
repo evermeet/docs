@@ -21,13 +21,47 @@ The backend is the central part of an evermeet instance:
 * communicate with the [Frontend](#frontend-web) and clients
 * communicate with other instances within the [Federation](/specs/federation)
 
-Backend communicate with Frontend, clients and external instances through HTTP & WebSocket API ([XRPC](/specs/xrpc)) endpoints defined by [Lexicons](/specs/lexicon).
+Backend source code: [@evermeet/api](https://github.com/evermeet/evermeet/tree/main/packages/api)
+
+### JavaScript Runtime
+
+Backend is runtime-agnostic, supports all major server-side JavaScript runtime environments: [Node.js](https://nodejs.org/), [Deno](https://deno.com/) and [Bun](https://bun.sh/).
+
+### HTTP & WebSocket API
+
+Backend communicate with [Frontend](#frontend-web), clients and external instances through HTTP & WebSocket API ([XRPC](/specs/xrpc)) endpoints defined by [Lexicons](/specs/lexicon).
+
+### HTTP frameworks
+
+Due to the runtime-agnostic approach, the use of various web frameworks is currently available:
+* [ElysiaJS](https://elysiajs.com/) (Bun)
+* [Fastify](https://fastify.dev/) (Bun, Deno, Node)
+* [Express](https://expressjs.com/) (all) (planned)
 
 ### Database
 
-As a database, we currently use the storage-agnostic solution [RxDB](https://rxdb.info/), which allows the use of various storage solutions under the hood.
+As a database, we currently use the storage-agnostic solution [MikroORM](https://mikro-orm.io/).
 
+Storage that can be used:
+* [MongoDB](https://mongodb.com/) / [FerretDB](https://www.ferretdb.com/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [MySQL](https://www.mysql.com/) / [MariaDB](https://mariadb.org/)
+* [SQL Server](https://www.microsoft.com/en-us/sql-server)
+* [SQLite](https://www.sqlite.org/) / [libsql](https://github.com/tursodatabase/libsql) - embedded
 
+----
 ## Frontend (web)
 
-The frontend is the web user interface through which users interact with the evermeet instance.
+The web user interface through which users interact with the evermeet instance.
+
+The frontend is written as [Single-page Application](https://en.wikipedia.org/wiki/Single-page_application) (SPA) using [SvelteKit](https://kit.svelte.dev/) powered by [Svelte](https://svelte.dev/) and [Vite](https://vitejs.dev/). For the communication with the [Backend](#backend-api) the HTTP API ([XRPC](/specs/xrpc)) is used.
+
+The frontend supports all modern standards including support for Server-side Rendering (SSR) for legacy browsers, bots and faster loading.
+
+Frontend source code: [@evermeet/web](https://github.com/evermeet/evermeet/tree/main/packages/web)
+
+### CSS/UI Tools
+
+* [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+* [DaisyUI](https://daisyui.com/) - CSS component library
+* [Melt UI](https://melt-ui.com/) - headless UI library

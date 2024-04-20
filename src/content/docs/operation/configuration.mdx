@@ -13,3 +13,32 @@ This file uses [YAML](https://yaml.org/) markup-language syntax.
 
 domain: my-evermeet-instance.com
 ```
+
+## Defaults
+
+Source: https://github.com/evermeet/evermeet/blob/main/config.defaults.yaml
+
+```yaml
+// config.yaml
+
+domain: evermeet.local
+sitename: null
+api:
+  enabled: true
+  runtime: bun
+  adapter: elysia
+  host: localhost
+  port: 3000
+  prefix: /xrpc
+  db:
+    storage: mongodb
+    name: evermeet-test
+    connection: mongodb://localhost:27017
+    password: putYourPasswordHere
+  sessionName: evermeet-session-id
+web:
+  enabled: true
+  port: 3001
+  host: localhost
+featuredCalendars: []
+```

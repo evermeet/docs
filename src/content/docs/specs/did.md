@@ -11,7 +11,8 @@ These identifiers guarantee greater security and easy portability of accounts fr
 Currently, evermeet supports two DID methods:
 
 * `did:web` - a W3C standard based on HTTPS (and DNS) ([specs](https://w3c-ccg.github.io/did-method-web/))
-* `did:plc` - a modern method developed for AT Protocol ([specs](https://github.com/did-method-plc/did-method-plc))
+* `did:plc` - a method developed for AT Protocol ([specs](https://github.com/did-method-plc/did-method-plc))
+* `did:dht` - a method based on [Pkarr](https://github.com/nuhvi/pkarr) and [Mainline DHT](https://en.wikipedia.org/wiki/Mainline_DHT) ([specs](https://did-dht.com/))
 
 ## `did:plc` Method
 
