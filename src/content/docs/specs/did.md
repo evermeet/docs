@@ -19,3 +19,9 @@ Currently, evermeet supports two DID methods:
 [DID PLC](https://github.com/did-method-plc/did-method-plc) is a self-authenticating DID which is strongly-consistent, recoverable, and allows for key rotation.
 
 An example DID is: `did:plc:ewvi7nxzyoun6zhxrhs64oiz` ([lookup](https://web.plc.directory/did/did:plc:ewvi7nxzyoun6zhxrhs64oiz))
+
+### PLC Directories
+
+Currently used PLC directories:
+* [dev-plc.evermeet.app](https://dev-plc.evermeet.app) - local development sandbox
+* [plc.directory](https://plc.directory) - for production use (planned)
