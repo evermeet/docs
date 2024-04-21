@@ -6,7 +6,7 @@ export default defineConfig({
 	site: 'https://docs.evermeet.app',
 	integrations: [
 		starlight({
-			title: 'evermeet :: docs',
+			title: 'evermeet 🔥 docs',
 			social: {
 				github: 'https://github.com/evermeet/evermeet',
 			},
