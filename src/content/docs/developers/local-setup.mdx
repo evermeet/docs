@@ -4,9 +4,13 @@ title: Local Development Setup
 
 ## Requirements
 
-* [Node.js](https://nodejs.org/en) v20.12.2+ (LTS) 
+* Runtime:
+  * [Node.js](https://nodejs.org/en) v20.12.2+ LTS
+  * [Bun.js](https://bun.sh/) v1.1+
+  * [Deno](https://deno.com/) v1.40+ (optional)
 * [pnpm](https://pnpm.io/) package manager ([How to install](https://pnpm.io/installation))
-* Local development [MongoDB](https://www.mongodb.com/) instance
+
+By default, the backend is now using Bun and Frontend Node.js (can be changed). The plan is for everything to run in one runtime and mutual compatibility.
 
 ## Quickstart
 
@@ -37,10 +41,7 @@ import { Steps } from '@astrojs/starlight/components';
 
 Done, your development instance is up and running and available at the following addresses:
 
+* Backend (api): http://localhost:3000/xrpc
 * Frontend (web): http://localhost:3001
-* Backend (api): http://localhost:3000/api
 
-
-## Database
-
-TODO
+By default, the `config.yaml` [configuration file](/operation/configuration) is loaded from the project root directory.

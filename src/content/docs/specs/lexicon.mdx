@@ -6,7 +6,7 @@ Lexicon is a schema definition language used to describe evermeet records, HTTP 
 
 We are currently using the [Lexicon definition language version 1](https://atproto.com/specs/lexicon) specification as defined by the AT Protocol.
 
-The schema language is similar to JSON Schema and OpenAPI.
+The schema language is similar to [JSON Schema](https://json-schema.org/) and [OpenAPI](https://www.openapis.org/).
 
 ## Namespaced Identifiers (NSIDs)
 
@@ -20,3 +20,8 @@ For example:
 * `app.evermeet.server.describeServer`
 
 → [Full NSID Syntax specification](https://atproto.com/specs/nsid)
+
+## Libraries
+
+* [@atproto/lexicon](https://github.com/bluesky-social/atproto/tree/main/packages/lexicon) (TypeScript) - schema validation library
+* [atproto-lexicon](https://github.com/socialweb-php/atproto-lexicon) (PHP) - A PHP-based Lexicon parser
